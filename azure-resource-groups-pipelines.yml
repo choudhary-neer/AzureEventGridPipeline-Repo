@@ -13,7 +13,7 @@ stages:
       name: create_dev_infra_resource_group
       displayName: '1st Step >> Create resource group for development environment'
       vmImage: 'windows-latest'
-      resourceGroupName: neerajc-dev-rg
+      resourceGroupName: neerajc-dev
       subscription: $(subscription)
 
 - stage: Test_Stage
@@ -24,7 +24,7 @@ stages:
       name: create_test_infra_resource_group
       displayName: '1st Step >> Create resource group for test environment'
       vmImage: 'windows-latest'
-      resourceGroupName: neerajc-test-rg
+      resourceGroupName: neerajc-test
       subscription: $(subscription)
   
 - stage: PreProduction_Stage
@@ -35,7 +35,7 @@ stages:
       name: create_preprod_infra_resource_group
       displayName: '1st Step >> Create resource group for pre-production environment'
       vmImage: 'windows-latest'
-      resourceGroupName: neerajc-preprod-rg
+      resourceGroupName: neerajc-preprod
       subscription: $(subscription)
 
 - stage: Production_Stage
@@ -46,5 +46,5 @@ stages:
       name: create_prod_infra_resource_group
       displayName: '1st Step >> Create resource group for production environment'
       vmImage: 'windows-latest'
-      resourceGroupName: neerajc-prod-rg
+      resourceGroupName: neerajc-prod
       subscription: $(subscription)
