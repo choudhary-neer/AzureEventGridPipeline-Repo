@@ -9,6 +9,7 @@ stages:
   displayName: 'Build the development environment resource group'
   jobs:
   - deployment: DeployDevelopmentGroup
+    displayName: 'Development group deployment'
     environment: 'Development'
   - template: 100-resource-group/create-resource-group.yml
     parameters:
@@ -22,6 +23,7 @@ stages:
   displayName: 'Build the test environment resource group'
   jobs:
   - deployment: DeployTestGroup
+    displayName: 'Test group deployment'
     environment: 'Test'
   - template: 100-resource-group/create-resource-group.yml
     parameters:
@@ -35,6 +37,7 @@ stages:
   displayName: 'Build the pre-prod environment resource group'
   jobs:
   - deployment: DeployPreProductionGroup
+    displayName: 'Pre-Production group deployment'
     environment: 'PreProduction'
   - template: 100-resource-group/create-resource-group.yml
     parameters:
@@ -48,6 +51,7 @@ stages:
   displayName: 'Build the production environment resource group'
   jobs:
   - deployment: DeployProductionGroup
+    displayName: 'Production group deployment'
     environment: 'Production'
   - template: 100-resource-group/create-resource-group.yml
     parameters:
