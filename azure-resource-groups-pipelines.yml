@@ -6,7 +6,7 @@ variables:
 
 stages:
 - stage: Development_Stage
-  displayName: 'Build the development environment resource group'
+  displayName: 'Provision the development environment resource group'
   jobs:
   - deployment: DeployDevelopmentGroup
     displayName: 'Development group deployment'
@@ -20,7 +20,7 @@ stages:
       subscription: $(subscription)
 
 - stage: Test_Stage
-  displayName: 'Build the test environment resource group'
+  displayName: 'Provision the test environment resource group'
   jobs:
   - deployment: DeployTestGroup
     displayName: 'Test group deployment'
@@ -34,7 +34,7 @@ stages:
       subscription: $(subscription)
   
 - stage: PreProduction_Stage
-  displayName: 'Build the pre-prod environment resource group'
+  displayName: 'Provision the pre-prod environment resource group'
   jobs:
   - deployment: DeployPreProductionGroup
     displayName: 'Pre-Production group deployment'
@@ -48,7 +48,7 @@ stages:
       subscription: $(subscription)
 
 - stage: Production_Stage
-  displayName: 'Build the production environment resource group'
+  displayName: 'Provision the production environment resource group'
   jobs:
   - deployment: DeployProductionGroup
     displayName: 'Production group deployment'
